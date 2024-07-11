@@ -1,16 +1,18 @@
 pipeline {
     agent any
     stages {
-        stage('build') {
+        stage('Test') {
             steps {
-                echo 'Compiling the java source code'
-                bat 'javac Hello.java'
+                echo "Clarusway_Way to Reinvent Yourself"
+                sh 'echo using shell within Jenkinsfile'
+                echo 'not using shell in the Jenkinsfile'
             }
         }
-        stage('run') {
+        stage('Publish Test Results') {
             steps {
-                echo 'Running the compiled java code.'
-              bat 'java Hello'
+                echo "Clarusway_Way to Reinvent Yourself"
+                sh 'echo using shell within Jenkinsfile'
+                echo 'not using shell in the Jenkinsfile'
             }
         }
     }
